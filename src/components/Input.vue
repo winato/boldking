@@ -38,11 +38,12 @@ export default {
 
 .input-field {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
   font-size: 16px;
   padding: 5px 7px;
+  width: 100%;
 }
 
 .input-label {
