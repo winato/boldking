@@ -1,15 +1,18 @@
 <template>
-  <form @submit.prevent="login">
+  <form @submit.prevent="login" class="login-form">
     <Input
+      label="User Name"
       name="userName"
       v-model="formData.userName"
     />
     <Input
+      label="Password"
       type="password"
       name="password"
       v-model="formData.password"
     />
     <Button
+      :wide="true"
       type="submit"
       :loading="loading"
     >
@@ -74,5 +77,12 @@ export default {
 </script>
 
 <style lang="css">
+
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 </style>

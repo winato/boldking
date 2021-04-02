@@ -1,9 +1,10 @@
 <template>
-  <label>
+  <label class="input-label">
     <span v-if="label">
       {{ label }}
     </span>
     <input
+      class="input-field"
       :value="value"
       @input="(e) => $emit('input', e.target.value)"
       :name="name"
@@ -33,6 +34,21 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+
+.input-field {
+  display: inline-block;
+  margin-bottom: 5px;
+  border: 1px solid #bcbcbc;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 5px 7px;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 </style>
