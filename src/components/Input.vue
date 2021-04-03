@@ -34,16 +34,20 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 
 .input-field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   display: inline-block;
+  width: 100%;
   margin-bottom: 3px;
+  padding: 5px 7px;
   border: 1px solid #bcbcbc;
   border-radius: 3px;
   font-size: 16px;
-  padding: 5px 7px;
-  width: 100%;
+  box-shadow: none;
 }
 
 .input-label {

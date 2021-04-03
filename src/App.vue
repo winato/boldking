@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app" id="app">
     <div class="container">
       <Login/>
     </div>
@@ -21,7 +21,7 @@ export default {
 <style>
 @import './styles/normalize.css';
 
-#app {
+.app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

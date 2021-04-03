@@ -29,8 +29,9 @@
         :rules="{
           required: true,
           min: 8,
+          regex: /(?=[A-Za-z0-9]+$)^(?=.*[a-z])(?=.*[0-9])(?=.{8,}).*$/g,
         }"
-        v-slot="{ errors }"
+        v-slot="{ errors, failedRules }"
       >
         <Input
           label="Password"
@@ -42,8 +43,12 @@
           v-if="errors.length"
           :errorText="errors[0]"
         />
+        <p v-if="failedRules.regex" class="password-info">
+          Make sure that your password contains at least one number
+        </p>
       </ValidationProvider>
       <Button
+        class="login-button"
         :wide="true"
         type="submit"
         :loading="loading"
@@ -117,8 +122,19 @@ export default {
 }
 </script>
 
-<style lang="css">
-  .login-form {
-    width: 250px;
-  }
+<style>
+
+.login-form {
+  width: 250px;
+}
+
+.password-info {
+  margin: 2px 0 5px;
+  font-size: 12px;
+}
+
+.login-button {
+  margin: 15px 0;
+}
+
 </style>

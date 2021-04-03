@@ -4,7 +4,7 @@ const validate = (value) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (Math.random() < 0.8) {
-        if (value && value.length > 8 && /^(a|e|i|o|u)/.test(value)) {
+        if (value && value.length >= 8 && /^(a|e|i|o|u)/.test(value)) {
           resolve();
         } else {
           reject(new Error(getMessage(value)));

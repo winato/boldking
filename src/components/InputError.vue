@@ -17,12 +17,13 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 
 .error {
   display: inline-block;
-  color: brown;
   margin-bottom: 5px;
+  font-size: 12px;
+  color: brown;
 }
 
 </style>

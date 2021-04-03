@@ -36,21 +36,22 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 
 .button {
   display: flex;
+  justify-content: center;
   padding: 7px 30px;
+  margin-bottom: 3px;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 3px;
   border-radius: 3px;
   font-size: 16px;
   background-color: #70c1ff;
   border: 1px solid #70c1ff;
-  text-align: center;
-  justify-content: center;
+  text-align: center;  
+  transition: all .1s ease-in-out;
 }
 
 .button.button-wide {
@@ -59,6 +60,8 @@ export default {
 
 .button:hover {
   cursor: pointer;
+  background-color: #61aee8;
+  border-color: #61aee8;
 }
 
 </style>
