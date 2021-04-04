@@ -43,12 +43,12 @@
           v-if="errors.length"
           :errorText="errors[0]"
         />
-        <p v-if="failedRules.regex" class="password-info">
+        <p v-if="failedRules.regex" class="login-form__password-info">
           Make sure that your password contains at least one number
         </p>
       </ValidationProvider>
       <Button
-        class="login-button"
+        class="login-form__login-button"
         :wide="true"
         type="submit"
         :loading="loading"
@@ -117,8 +117,8 @@ export default {
 
     toggleLoading() {
       this.loading = !this.loading;
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -128,12 +128,12 @@ export default {
   width: 250px;
 }
 
-.password-info {
+.login-form__password-info {
   margin: 2px 0 5px;
   font-size: 12px;
 }
 
-.login-button {
+.login-form__login-button {
   margin: 15px 0;
 }
 

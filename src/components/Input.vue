@@ -1,16 +1,18 @@
 <template>
-  <label class="input-label">
-    <span v-if="label">
-      {{ label }}
-    </span>
-    <input
-      class="input-field"
-      :value="value"
-      @input="(e) => $emit('input', e.target.value)"
-      :name="name"
-      v-bind="$attrs"
-    />
-  </label>
+  <div class="input">
+    <label class="input__label">
+      <span v-if="label">
+        {{ label }}
+      </span>
+      <input
+        class="input__field"
+        :value="value"
+        :name="name"
+        v-bind="$attrs"
+        @input="(e) => $emit('input', e.target.value)"
+      />
+    </label>
+  </div>
 </template>
 
 <script>
@@ -29,14 +31,14 @@ export default {
     name: {
       type: String,
       required: true,
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style scoped>
 
-.input-field {
+.input__field {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -48,12 +50,6 @@ export default {
   border-radius: 3px;
   font-size: 16px;
   box-shadow: none;
-}
-
-.input-label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 </style>

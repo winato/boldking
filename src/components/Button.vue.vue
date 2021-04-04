@@ -5,7 +5,7 @@
     :disabled="loading"
     class="button"
     :class="{
-      'button-wide': wide
+      'button--wide': wide
     }"
   >
     <slot v-if="!loading"/>
@@ -54,7 +54,7 @@ export default {
   transition: all .1s ease-in-out;
 }
 
-.button.button-wide {
+.button.button--wide {
   width: 100%;
 }
 

@@ -12,8 +12,8 @@ export default {
     errorText: {
       type: String,
       default: '',
-    }
-  }
+    },
+  },
 }
 </script>
 
